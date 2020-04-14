@@ -67,9 +67,43 @@ We can see that with reproduction rate as 1.026 (R0>1) there can be approx. 4658
 Government of India have been taking strict actions since early march. Starting with internation travel ban, 1 day voluntary lockdown(Janta curfew)on 23rd March, 21 days lockdown from 25th march till 15th April followed by today's annoucement to extend lockdown till 3rd May. These actions are to reduce person-to-person contact to reduce the spread of infection. 
 
 Lets implement these in our model. Keeping the recovery rate (γ) as same we change the contact or infection rate(β).
-![Image description]()
+![Image description](https://github.com/kadhak/Spread-of-COVID-19/blob/master/SIR%20model%20with%20government%20%20Intervention.PNG)
 
 Change in beta value is derived by trial and error to fit the actual infected numbers till date. Understanding and approach may vary.
-Using this we see 
+Using this we see peak is with approx 17600 on mid April.
+
+Simple SIR model does not account for latency period.Individuals who are exposed (E) have had contact with an infected person, but are not themselves infectious. In case of COVID-19 we have observed that exposed individual may not show symptoms immediately but after certain days of exposure. Thus lets also consider SEIR model.
+
+4. SEIR Model (Susceptible - Exposed - Infectious - Recovered)
+The flow of this model may be considered as follows:
+S-->E-->I-->R
+
+
+dS/dt=-βSI/N
+
+dE/dt=βSI/N-σE
+
+dI/dt=σE-γI
+
+dR/dt=γI
+
+where N = S + E + I + R is the total population.
+
+β:the contact or infection rate of the disease.
+
+σ:the Incubation Rate(1/σ the mean period of incubation).
+
+γ:the mean recovery/death rate(1/γ the mean infective period).
+
+I have used optimize.curve_fit() function to derive β,σ and γ parameter from the real data.I have used data since 2nd march till 14th April as since then the number of infected cases started to rise.
+
+R_0=1.026 .Using these parameters and solving above equation we can do prediction.
+
+![Image description]()
+
+References:
+1. https://www.idmod.org/docs/hiv/model-seir.html#seir-without-vital-dynamics
+
+
 
 
