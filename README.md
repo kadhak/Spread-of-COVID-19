@@ -102,7 +102,9 @@ R_0=1.026 .Using these parameters and solving above equation we can do predictio
 ![Image description](https://github.com/kadhak/Spread-of-COVID-19/blob/master/Fitting%20SEIR%20curve.PNG)
 
 References:
-1. https://www.idmod.org/docs/hiv/model-seir.html#seir-without-vital-dynamics
+1. https://www.idmod.org/docs/hiv/model-seir.html#seir-without-vital-dynamics.
+2. https://www.kaggle.com/super13579/covid-19-global-forecast-seir-visualize.
+3. 
 
 
 
