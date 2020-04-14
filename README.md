@@ -18,7 +18,7 @@ Linear Regression for finding the Growth Factor: log x(t)=log(x0)+log(b)*t
 we use the log of the number of infections instead of the number of infections we use the log of growth factor instead of growth factor.
 
 Attached graph shows covid infection in India till 13th April follow exponential path.
-![Image description](Spread-of-COVID-19/Covid Exponential model.PNG)
+![Image description](https://github.com/kadhak/Spread-of-COVID-19/blob/master/Covid%20Exponential%20model.PNG)
 
 2. Logistic model
 
