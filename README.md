@@ -55,9 +55,21 @@ dR/dt=γI
 
 γ:the mean recovery/death rate(1/γ the mean infective period).
 
-One can derive β and γ parameters by fitting real epidemic data to the curve using optimize.curve_fit() function. Using these parameters and solving above equation we can do prediction.
+One can derive β and γ parameters by fitting real epidemic data to the curve using optimize.curve_fit() function. I have used data since 2nd march till 14th April as since then the number of infected cases started to rise.
+R_0=1.026 .Using these parameters and solving above equation we can do prediction.
 
 Attached graph shows fitting data to non linear curve. SIR model for India covid data.
 ![Image description](https://github.com/kadhak/Spread-of-COVID-19/blob/master/Fitting%20SIR%20curve.PNG)
 ![Image description](https://github.com/kadhak/Spread-of-COVID-19/blob/master/SIR%20modlel%20without%20Intervention.PNG)
+
+We can see that with reproduction rate as 1.026 (R0>1) there can be approx. 465831 infected cases in India.Since there is no cure developed yet for COVID-19,non-pharmaceutical measure are required. Avoiding close contact with infected individuals and keeping personal hygienic are some of the suggested steps.
+
+Government of India have been taking strict actions since early march. Starting with internation travel ban, 1 day voluntary lockdown(Janta curfew)on 23rd March, 21 days lockdown from 25th march till 15th April followed by today's annoucement to extend lockdown till 3rd May. These actions are to reduce person-to-person contact to reduce the spread of infection. 
+
+Lets implement these in our model. Keeping the recovery rate (γ) as same we change the contact or infection rate(β).
+![Image description](https://github.com/kadhak/Spread-of-COVID-19/blob/master/SIR%20model%20with%20government%20%20Intervention.PNG)
+
+Change in beta value is derived by trial and error to fit the actual infected numbers till date. Understanding and approach may vary.
+Using this we see 
+
 
