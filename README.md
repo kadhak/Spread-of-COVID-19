@@ -31,6 +31,7 @@ c: total number of recorded infected people at infection's end
 x: time
 
 Attached graph shows predicts the end of covid infection in India using data till 13th April.
+![Image description](https://github.com/kadhak/Spread-of-COVID-19/blob/master/Covid%20Logistics%20Model.PNG)
 
 3. SIR model
 
@@ -57,5 +58,6 @@ dR/dt=γI
 One can derive β and γ parameters by fitting real epidemic data to the curve using optimize.curve_fit() function. Using these parameters and solving above equation we can do prediction.
 
 Attached graph shows fitting data to non linear curve. SIR model for India covid data.
-
+![Image description](https://github.com/kadhak/Spread-of-COVID-19/blob/master/Fitting%20SIR%20curve.PNG)
+![Image description](https://github.com/kadhak/Spread-of-COVID-19/blob/master/SIR%20modlel%20without%20Intervention.PNG)
 
