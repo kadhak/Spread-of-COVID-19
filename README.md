@@ -67,7 +67,7 @@ We can see that with reproduction rate as 1.026 (R0>1) there can be approx. 4658
 Government of India have been taking strict actions since early march. Starting with internation travel ban, 1 day voluntary lockdown(Janta curfew)on 23rd March, 21 days lockdown from 25th march till 15th April followed by today's annoucement to extend lockdown till 3rd May. These actions are to reduce person-to-person contact to reduce the spread of infection. 
 
 Lets implement these in our model. Keeping the recovery rate (γ) as same we change the contact or infection rate(β).
-![Image description](https://github.com/kadhak/Spread-of-COVID-19/blob/master/SIR%20model%20with%20government%20%20Intervention.PNG)
+![Image description]()
 
 Change in beta value is derived by trial and error to fit the actual infected numbers till date. Understanding and approach may vary.
 Using this we see 
