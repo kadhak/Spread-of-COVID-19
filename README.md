@@ -17,8 +17,8 @@ b is the number of people infected by each sick person, the growth factor
 Linear Regression for finding the Growth Factor: log x(t)=log(x0)+log(b)*t
 we use the log of the number of infections instead of the number of infections we use the log of growth factor instead of growth factor.
 
-Attached graph shows covid infection in India till 13th April follow exponential path. The growth factor 1.18
-![Image description](https://github.com/kadhak/Spread-of-COVID-19/blob/master/Covid%20Logistics%20Model_new.PNG)
+Attached graph shows covid infection in India till 26th April follow exponential path. The growth factor is channged from 1.18 to 0.99
+![Image description](https://github.com/kadhak/Spread-of-COVID-19/blob/master/Covid%20Exponential%20model_1.PNG)
 
 2. Logistic model
 
@@ -30,8 +30,8 @@ b: the day with maxium infections occured
 c: total number of recorded infected people at infection's end
 x: time
 
-Attached graph shows predicts the end of covid infection in India using data till 13th April.
-![Image description](https://github.com/kadhak/Spread-of-COVID-19/blob/master/Covid%20Logistics%20Model.PNG)
+Attached graph shows predicts the end of covid infection in India using data till 26th April.
+![Image description](https://github.com/kadhak/Spread-of-COVID-19/blob/master/Covid%20Logistics%20Model_new.PNG)
 
 3. SIR model
 
@@ -95,16 +95,15 @@ where N = S + E + I + R is the total population.
 
 γ:the mean recovery/death rate(1/γ the mean infective period).
 
-I have used optimize.curve_fit() function to derive β,σ and γ parameter from the real data.I have used data since 2nd march till 14th April as since then the number of infected cases started to rise.
+I have used optimize.curve_fit() function to derive β,σ and γ parameter from the real data.I have used data since 2nd march till 26th April as since then the number of infected cases started to rise.
 
-R_0=1.026 .Using these parameters and solving above equation we can do prediction.
+R_0 changed from 1.026 to 1.006 .Using these parameters and solving above equation we can do prediction.
 
 ![Image description](https://github.com/kadhak/Spread-of-COVID-19/blob/master/Fitting%20SEIR%20curve.PNG)
 
 References:
 1. https://www.idmod.org/docs/hiv/model-seir.html#seir-without-vital-dynamics.
 2. https://www.kaggle.com/super13579/covid-19-global-forecast-seir-visualize.
-3
 
 
 
