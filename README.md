@@ -6,6 +6,8 @@ These model project how infectious diseases progress to show the likely outcome 
 Data source:
 https://api.covid19india.org/data.json
 
+Note: Content from this page is strictly only for educational and research purposes and may contain errors. Also, analysis results and predictions changes day to day based on latest data points.
+
 1. Exponential Model¶
 
 Epidemics in intial stages have exponetial growth.Exponential Growth is characterized by the following formula:
@@ -55,18 +57,20 @@ dR/dt=γI
 
 γ:the mean recovery/death rate(1/γ the mean infective period).
 
-One can derive β and γ parameters by fitting real epidemic data to the curve using optimize.curve_fit() function. I have used data since 2nd march till 14th April as since then the number of infected cases started to rise.
-R_0=1.026 .Using these parameters and solving above equation we can do prediction.
+One can derive β and γ parameters by fitting real epidemic data to the curve using optimize.curve_fit() function. I have used data since 2nd march till 26th April as since then the number of infected cases started to rise.
+R_0 changed from 1.026 to 1 .Using these parameters and solving above equation we can do prediction.
 
 Attached graph shows fitting data to non linear curve. SIR model for India covid data.
 ![Image description](https://github.com/kadhak/Spread-of-COVID-19/blob/master/Fitting%20SIR%20curve.PNG)
 ![Image description](https://github.com/kadhak/Spread-of-COVID-19/blob/master/SIR%20modlel%20without%20Intervention.PNG)
 
-We can see that with reproduction rate as 1.026 (R0>1) there can be approx. 465831 infected cases in India.Since there is no cure developed yet for COVID-19,non-pharmaceutical measure are required. Avoiding close contact with infected individuals and keeping personal hygienic are some of the suggested steps.
+We can see that with reproduction rate as (1.026,1.0) (R0>1) there can be approx. 29246 infected cases in India.Since there is no cure developed yet for COVID-19,non-pharmaceutical measure are required. Avoiding close contact with infected individuals and keeping personal hygienic are some of the suggested steps.
 
 Government of India have been taking strict actions since early march. Starting with internation travel ban, 1 day voluntary lockdown(Janta curfew)on 23rd March, 21 days lockdown from 25th march till 15th April followed by today's annoucement to extend lockdown till 3rd May. These actions are to reduce person-to-person contact to reduce the spread of infection. 
 
-Lets implement these in our model. Keeping the recovery rate (γ) as same we change the contact or infection rate(β).
+NEED TO BE UPDATED BELOW  THIS POINT
+
+Lets implement these in our model. Keeping the recovery rate (γ) as same we change the contact or infection rate(β). 
 ![Image description](https://github.com/kadhak/Spread-of-COVID-19/blob/master/SIR%20model%20with%20government%20%20Intervention.PNG)
 
 Change in beta value is derived by trial and error to fit the actual infected numbers till date. Understanding and approach may vary.
@@ -97,7 +101,7 @@ where N = S + E + I + R is the total population.
 
 I have used optimize.curve_fit() function to derive β,σ and γ parameter from the real data.I have used data since 2nd march till 26th April as since then the number of infected cases started to rise.
 
-R_0 changed from 1.026 to 1.006 .Using these parameters and solving above equation we can do prediction.
+R_0 = 1.026.Using these parameters and solving above equation we can do prediction.
 
 ![Image description](https://github.com/kadhak/Spread-of-COVID-19/blob/master/Fitting%20SEIR%20curve.PNG)
 
