@@ -1,7 +1,7 @@
 # Spread-of-COVID-19
 
 Predict the spread of infection in India using various mathematical models used of epidemics.
-These model project how infectious diseases progress to show the likely outcome of an epidemic and help inform public health interventions. The intent of this blog is to help understand the transmission dynamics of COVID-19 and recommend operation suggestions
+The intent of this blog is to help understand the transmission dynamics of COVID-19 and recommend operation suggestions
 to slow down the epidemic. It is suggested that quickly detecting cases, enough quarantine implementation and public self-protection behaviors are critical to slow down the epidemic.
 
 With growing number of cases have occurred in more than 150 countries and regions, modeling the COVID-19’s transmission dynamics and estimating its development are crucial to provide decision supports for public health departments and healthcare policy makers. Mathematical models are widely used in evaluating epidemic transmissions, forecasting the trend of disease spread, and providing optimal intervention strategies and control measures. Considerable recent studies have contended to estimate COVID-19’s scale and severity, several mathematical models and predicting approaches have attempted to estimate the transmission of COVID-194-8. Majority
@@ -37,7 +37,7 @@ b: the day with maxium infections occured
 c: total number of recorded infected people at infection's end
 x: time
 
-We used the least squares method to fit the logistic growth function, and then to predict the number of future confirmed cases. Since the case numbers reported at very early stage are usually inaccuracy ormissing, the initiate date of the model was set as the day since the 100th confirmed case was reached. That is 14th March 2020 with 102 total confirmed cases and 2 deaths
+We used the least squares method to fit the logistic growth function, and then to predict the number of future confirmed cases. Since the case numbers reported at very early stage are usually inaccuracy or missing, the initiate date of the model was set as the day since the 100th confirmed case was reached. That is 14th March 2020 with 102 total confirmed cases and 2 deaths
 
 Attached graph shows predicts the end of covid infection in India using data till 13th May.
 ![Image description](https://github.com/kadhak/Spread-of-COVID-19/blob/master/Covid%20Logistics%20Model_1.PNG)
@@ -68,18 +68,27 @@ dR/dt=γI
 
 γ:the mean recovery/death rate(1/γ the mean infective period).
 
-One can derive β and γ parameters by fitting real epidemic data to the curve using optimize.curve_fit() function. I have used data since 2nd march till 26th April as since then the number of infected cases started to rise.
-R_0 changed from 1.026 to 1 .Using these parameters and solving above equation we can do prediction.
-
+One can derive β and γ parameters by fitting real epidemic data to the curve using optimize.curve_fit() function.
 Attached graph shows fitting data to non linear curve. SIR model for India covid data.
 ![Image description](https://github.com/kadhak/Spread-of-COVID-19/blob/master/Fitting%20SIR%20curve.PNG)
-![Image description](https://github.com/kadhak/Spread-of-COVID-19/blob/master/SIR%20modlel%20without%20Intervention.PNG)
+
+1. When initiatal date of the model was set as the day since the 1000th confirmed case was reached. That is 28th March 2020 with 1019 total confirmed cases and 14 deaths. We get below predictions.
+![Image description]()
+Maximum number of infected people: 79785.7199031136 on: 17 May 2020
+
+2. When initiatal date of the model was set as 29th march 2020 with 1139 total confirmed cases and 15 deaths. We get below predictions.
+![Image description]()
+Maximum number of infected people: 104968.91224885875 on: 22 May 2020
+
+3. When initiatal date of the model was set as 8th April 2020 with 5915 total confirmed cases and 25 deaths. We get below predictions.
+![Image description]()
+Maximum number of infected people: 96791.96090693276 on: 24 May 2020
 
 We can see that with reproduction rate as (1.026,1.0) (R0>1) there can be approx. 29246 infected cases in India.Since there is no cure developed yet for COVID-19,non-pharmaceutical measure are required. Avoiding close contact with infected individuals and keeping personal hygienic are some of the suggested steps.
 
 Government of India have been taking strict actions since early march. Starting with internation travel ban, 1 day voluntary lockdown(Janta curfew)on 23rd March, 21 days lockdown from 25th march till 15th April followed by today's annoucement to extend lockdown till 3rd May. These actions are to reduce person-to-person contact to reduce the spread of infection. 
 
-NEED TO BE UPDATED BELOW  THIS POINT
+MODEL WITH GOVERNMENT INTERVENTION IS BASED ON OLDER DATA.IT'S BIT TRICKY AS R_0 NEEDS TO VARIED WITH TIME.NEED TO BE UPDATED
 
 Lets implement these in our model. Keeping the recovery rate (γ) as same we change the contact or infection rate(β). 
 ![Image description](https://github.com/kadhak/Spread-of-COVID-19/blob/master/SIR%20model%20with%20government%20%20Intervention.PNG)
