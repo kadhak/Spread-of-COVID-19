@@ -26,7 +26,8 @@ we use the log of the number of infections instead of the number of infections w
 Attached graph shows covid infection in India till 26th April follow exponential path. The growth factor is channged from 1.18 to 0.99
 ![Image description](https://github.com/kadhak/Spread-of-COVID-19/blob/master/Covid%20Exponential%20model_1.PNG)
 
-2. Logistic model:
+2. Logistic model
+
 The logistic model’s essence is that curve fitting and its prediction results highly depend on the historical data. It has been often used in epidemics dynamics prediction in previous studies. Mathematically, the logistic model describes dynamic evolution of infected individuals being controlled by the growth rate and population capacity. Below equation
 
 Logistic model on the other hand predicts the eventual decay.
@@ -43,8 +44,8 @@ Attached graph shows predicts the end of covid infection in India using data til
 ![Image description](https://github.com/kadhak/Spread-of-COVID-19/blob/master/Covid%20Logistics%20Model_1.PNG)
 
 Model Results: as of 13th may 2020
-Infection speed(a):  11.532127642948556  and the day with maxium infections occured from 2020-03-14 =  62.37142227396574  and Maximum infected cases =  172532.3778604776  on: 12 October 2020
-Death speed(a):  11.004341994256052  and the day with maxium death occured from 2020-03-14 =  59.92882630078968  and Maximum death cases =  5063.83544275687 on: 16 August 2020
+Infection speed(a):  11.532127642948556  and the day with maxium infections occured from 2020-03-14 =  62 and Maximum infected cases =  172532 by 12 October 2020
+Death speed(a):  11.004341994256052  and the day with maxium death occured from 2020-03-14 =  59 and Maximum death cases =  5063 by 16 August 2020
 
 3. SIR model
 
@@ -74,15 +75,15 @@ Attached graph shows fitting data to non linear curve. SIR model for India covid
 
 1. When initiatal date of the model was set as the day since the 1000th confirmed case was reached. That is 28th March 2020 with 1019 total confirmed cases and 14 deaths. We get below predictions.
 ![Image description](https://github.com/kadhak/Spread-of-COVID-19/blob/master/SIR%20model%2028%20march.PNG)
-Maximum number of infected people: 79785.7199031136 on: 17 May 2020
+Maximum number of infected people: 79786 by 17 May 2020
 
 2. When initiatal date of the model was set as 29th march 2020 with 1139 total confirmed cases and 15 deaths. We get below predictions.
 ![Image description](https://github.com/kadhak/Spread-of-COVID-19/blob/master/SIR%20model%2029%20march.PNG)
-Maximum number of infected people: 104968.91224885875 on: 22 May 2020
+Maximum number of infected people: 104969 by 22 May 2020
 
 3. When initiatal date of the model was set as 8th April 2020 with 5915 total confirmed cases and 25 deaths. We get below predictions.
 ![Image description](https://github.com/kadhak/Spread-of-COVID-19/blob/master/SIR%20model%208%20april.PNG)
-Maximum number of infected people: 96791.96090693276 on: 24 May 2020
+Maximum number of infected people: 96792 by 24 May 2020
 
 We can see that with reproduction rate as (1.026,1.0) (R0>1) there can be approx. 29246 infected cases in India.Since there is no cure developed yet for COVID-19,non-pharmaceutical measure are required. Avoiding close contact with infected individuals and keeping personal hygienic are some of the suggested steps.
 
