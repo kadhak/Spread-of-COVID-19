@@ -132,13 +132,16 @@ I have used optimize.curve_fit() function to derive β,σ and γ parameter from 
 
 ![Image description](https://github.com/kadhak/Spread-of-COVID-19/blob/master/Fitting%20SEIR%20curve%2028%20march.PNG)
 
-Optimal parameters: beta = 2.446448627293251  and sigma =  0.04514643621693851  and gamma =  0.866100276526135
+Optimal parameters: beta = 2.446448627293251
+sigma =  0.04514643621693851
+gamma =  0.866100276526135
 Beta:  Average contact rate in the population: 2.446448627293251
 sigma: Is the inverse of the incubation period: 0.04514643621693851
 Gamma: is the inverse of the mean infectious period: 0.866100276526135
 R0:Secondary infection caused by primary infected person: 2.8246713384110413
 Average period of Incubation: 22.150142598073103
 Average period of Infection: 1.1546007166871335
+
 Using these parameters and solving above equation we can do prediction: 
 
 ![Image description](https://github.com/kadhak/Spread-of-COVID-19/blob/master/SEIR%20without%20Intervention.PNG)
