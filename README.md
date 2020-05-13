@@ -1,7 +1,11 @@
 # Spread-of-COVID-19
 
 Predict the spread of infection in India using various mathematical models used of epidemics.
-These model project how infectious diseases progress to show the likely outcome of an epidemic and help inform public health interventions.
+These model project how infectious diseases progress to show the likely outcome of an epidemic and help inform public health interventions. The intent of this blog is to help understand the transmission dynamics of COVID-19 and recommend operation suggestions
+to slow down the epidemic. It is suggested that quickly detecting cases, enough quarantine implementation and public self-protection behaviors are critical to slow down the epidemic.
+
+With growing number of cases have occurred in more than 150 countries and regions, modeling the COVID-19’s transmission dynamics and estimating its development are crucial to provide decision supports for public health departments and healthcare policy makers. Mathematical models are widely used in evaluating epidemic transmissions, forecasting the trend of disease spread, and providing optimal intervention strategies and control measures. Considerable recent studies have contended to estimate COVID-19’s scale and severity, several mathematical models and predicting approaches have attempted to estimate the transmission of COVID-194-8. Majority
+of the researches estimated the basic reproductive number R0, a key parameter to evaluate the potential of COVID-19 transmission. However, different models often yield different conclusions in terms of differences in model structure and input parameters. It is imperative and critical to improve early predictive and warning capability for the pandemic.
 
 Data source:
 https://api.covid19india.org/data.json
@@ -22,7 +26,8 @@ we use the log of the number of infections instead of the number of infections w
 Attached graph shows covid infection in India till 26th April follow exponential path. The growth factor is channged from 1.18 to 0.99
 ![Image description](https://github.com/kadhak/Spread-of-COVID-19/blob/master/Covid%20Exponential%20model_1.PNG)
 
-2. Logistic model
+2. Logistic model:
+The logistic model’s essence is that curve fitting and its prediction results highly depend on the historical data. It has been often used in epidemics dynamics prediction in previous studies. Mathematically, the logistic model describes dynamic evolution of infected individuals being controlled by the growth rate and population capacity. Below equation
 
 Logistic model on the other hand predicts the eventual decay.
 I(t) = c/1 + exp(-(x-b)/a)
@@ -32,8 +37,14 @@ b: the day with maxium infections occured
 c: total number of recorded infected people at infection's end
 x: time
 
-Attached graph shows predicts the end of covid infection in India using data till 26th April.
-![Image description](https://github.com/kadhak/Spread-of-COVID-19/blob/master/Covid%20Logistics%20Model_new.PNG)
+We used the least squares method to fit the logistic growth function, and then to predict the number of future confirmed cases. Since the case numbers reported at very early stage are usually inaccuracy ormissing, the initiate date of the model was set as the day since the 100th confirmed case was reached. That is 14th March 2020 with 102 total confirmed cases and 2 deaths
+
+Attached graph shows predicts the end of covid infection in India using data till 13th May.
+![Image description](https://github.com/kadhak/Spread-of-COVID-19/blob/master/Covid%20Logistics%20Model_1.PNG)
+
+Model Results:
+Infection speed(a):  11.532127642948556  and the day with maxium infections occured from 2020-03-14 =  62.37142227396574  and Maximum infected cases =  172532.3778604776  on: 12 October 2020
+Death speed(a):  11.004341994256052  and the day with maxium death occured from 2020-03-14 =  59.92882630078968  and Maximum death cases =  5063.83544275687 on: 16 August 2020
 
 3. SIR model
 
@@ -108,6 +119,7 @@ R_0 = 1.026.Using these parameters and solving above equation we can do predicti
 References:
 1. https://www.idmod.org/docs/hiv/model-seir.html#seir-without-vital-dynamics.
 2. https://www.kaggle.com/super13579/covid-19-global-forecast-seir-visualize.
+3. https://www.medrxiv.org/content/10.1101/2020.03.26.20044289v1.full.pdf
 
 
 
