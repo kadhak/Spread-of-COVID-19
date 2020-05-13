@@ -42,7 +42,7 @@ We used the least squares method to fit the logistic growth function, and then t
 Attached graph shows predicts the end of covid infection in India using data till 13th May.
 ![Image description](https://github.com/kadhak/Spread-of-COVID-19/blob/master/Covid%20Logistics%20Model_1.PNG)
 
-Model Results:
+Model Results: as of 13th may 2020
 Infection speed(a):  11.532127642948556  and the day with maxium infections occured from 2020-03-14 =  62.37142227396574  and Maximum infected cases =  172532.3778604776  on: 12 October 2020
 Death speed(a):  11.004341994256052  and the day with maxium death occured from 2020-03-14 =  59.92882630078968  and Maximum death cases =  5063.83544275687 on: 16 August 2020
 
