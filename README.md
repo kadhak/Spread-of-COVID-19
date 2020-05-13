@@ -129,7 +129,7 @@ where N = S + E + I + R is the total population.
 
 I have used optimize.curve_fit() function to derive β,σ and γ parameter from the real data.I have used data since 28th march till 13th may.
 
-![Image description]()
+![Image description](https://github.com/kadhak/Spread-of-COVID-19/blob/master/Fitting%20SEIR%20curve%2028%20march.PNG)
 
 Optimal parameters: beta = 2.446448627293251  and sigma =  0.04514643621693851  and gamma =  0.866100276526135
 Beta:  Average contact rate in the population: 2.446448627293251
@@ -140,7 +140,7 @@ Average period of Incubation: 22.150142598073103
 Average period of Infection: 1.1546007166871335
 Using these parameters and solving above equation we can do prediction: 
 
-![Image description]()
+![Image description](https://github.com/kadhak/Spread-of-COVID-19/blob/master/SEIR%20without%20Intervention.PNG)
 
 Imax:Before  intervention Maximum number of infected people: 18637861 by 01 October 2020
 
