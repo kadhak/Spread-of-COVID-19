@@ -145,7 +145,8 @@ Using these parameters and solving above equation we can do prediction:
 Imax:Before  intervention Maximum number of infected people: 18637861 by 01 October 2020
 
 SEIR: Scenario 2: the Generalized SEIR model(with strict interventions and measures).
-By generalizing the classical SEIR model, e.g. introducing a new quarantined stateand considering the eﬀect of preventive measures, key epidemic parameters for COVID 19, like the latent time, quarantine time and basic reproduction number are determined in a relatively reliable way
+By generalizing the classical SEIR model, e.g. introducing a new quarantined stateand considering the eﬀect of preventive measures, key epidemic parameters for COVID 19, like the latent time, quarantine time and basic reproduction number are determined in a relatively reliable way.
+![Image description](https://github.com/kadhak/Spread-of-COVID-19/blob/master/Generalized%20SEIR%20Model.PNG)
 
 References:
 1. https://www.idmod.org/docs/hiv/model-seir.html#seir-without-vital-dynamics.
