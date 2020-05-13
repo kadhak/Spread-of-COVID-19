@@ -70,18 +70,18 @@ dR/dt=γI
 
 One can derive β and γ parameters by fitting real epidemic data to the curve using optimize.curve_fit() function.
 Attached graph shows fitting data to non linear curve. SIR model for India covid data.
-![Image description](https://github.com/kadhak/Spread-of-COVID-19/blob/master/Fitting%20SIR%20curve.PNG)
+![Image description](https://github.com/kadhak/Spread-of-COVID-19/blob/master/Fitting%20SIR%20curve%2029%20march.PNG)
 
 1. When initiatal date of the model was set as the day since the 1000th confirmed case was reached. That is 28th March 2020 with 1019 total confirmed cases and 14 deaths. We get below predictions.
-![Image description]()
+![Image description](https://github.com/kadhak/Spread-of-COVID-19/blob/master/SIR%20model%2028%20march.PNG)
 Maximum number of infected people: 79785.7199031136 on: 17 May 2020
 
 2. When initiatal date of the model was set as 29th march 2020 with 1139 total confirmed cases and 15 deaths. We get below predictions.
-![Image description]()
+![Image description](https://github.com/kadhak/Spread-of-COVID-19/blob/master/SIR%20model%2029%20march.PNG)
 Maximum number of infected people: 104968.91224885875 on: 22 May 2020
 
 3. When initiatal date of the model was set as 8th April 2020 with 5915 total confirmed cases and 25 deaths. We get below predictions.
-![Image description]()
+![Image description](https://github.com/kadhak/Spread-of-COVID-19/blob/master/SIR%20model%208%20april.PNG)
 Maximum number of infected people: 96791.96090693276 on: 24 May 2020
 
 We can see that with reproduction rate as (1.026,1.0) (R0>1) there can be approx. 29246 infected cases in India.Since there is no cure developed yet for COVID-19,non-pharmaceutical measure are required. Avoiding close contact with infected individuals and keeping personal hygienic are some of the suggested steps.
