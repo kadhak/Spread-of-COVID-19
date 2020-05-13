@@ -98,10 +98,18 @@ Using this we see peak is with approx 17600 on mid April.
 
 Simple SIR model does not account for latency period.Individuals who are exposed (E) have had contact with an infected person, but are not themselves infectious. In case of COVID-19 we have observed that exposed individual may not show symptoms immediately but after certain days of exposure. Thus lets also consider SEIR model.
 
-4. SEIR Model (Susceptible - Exposed - Infectious - Recovered)
-The flow of this model may be considered as follows:
+4. SEIR Model (Susceptible - Exposed - Infectious - Recovered):
+
+SEIR is a deterministic metapopulation transmission model, it simulates each individual in the population as a separate compartment.The flow of individuals this model may be considered as follows:
+
 S-->E-->I-->R
 
+By plugging in different setting of parameters, however, the models yield different results and we compared their results to observe patterns of the COVID-19 spread under two different scenarios. 
+Scenario 1: the basic SEIR (without any interventions and measures)
+Scenario 2:the adjusted SEIR (with strict interventions and measures)
+
+SEIR: Scenario 1: the basic SEIR (without any interventions and measures).
+The model is measured by below equation, and the entire population was initially susceptible with the assumption that all people have no immunity against COVID-19, the initiate number of cases were collected from the reported data. For the reason that reliable data are still scarce during the early days of a new outbreak, the initiate date of the model was set as the day since the 1000th confirmed case was reached.
 
 dS/dt=-βSI/N
 
@@ -119,16 +127,32 @@ where N = S + E + I + R is the total population.
 
 γ:the mean recovery/death rate(1/γ the mean infective period).
 
-I have used optimize.curve_fit() function to derive β,σ and γ parameter from the real data.I have used data since 2nd march till 26th April as since then the number of infected cases started to rise.
+I have used optimize.curve_fit() function to derive β,σ and γ parameter from the real data.I have used data since 28th march till 13th may.
 
-R_0 = 1.026.Using these parameters and solving above equation we can do prediction.
+![Image description]()
 
-![Image description](https://github.com/kadhak/Spread-of-COVID-19/blob/master/Fitting%20SEIR%20curve.PNG)
+Optimal parameters: beta = 2.446448627293251  and sigma =  0.04514643621693851  and gamma =  0.866100276526135
+Beta:  Average contact rate in the population: 2.446448627293251
+sigma: Is the inverse of the incubation period: 0.04514643621693851
+Gamma: is the inverse of the mean infectious period: 0.866100276526135
+R0:Secondary infection caused by primary infected person: 2.8246713384110413
+Average period of Incubation: 22.150142598073103
+Average period of Infection: 1.1546007166871335
+Using these parameters and solving above equation we can do prediction: 
+
+![Image description]()
+
+Imax:Before  intervention Maximum number of infected people: 18637861 by 01 October 2020
+
+SEIR: Scenario 2: the Generalized SEIR model(with strict interventions and measures).
+By generalizing the classical SEIR model, e.g. introducing a new quarantined stateand considering the eﬀect of preventive measures, key epidemic parameters for COVID 19, like the latent time, quarantine time and basic reproduction number are determined in a relatively reliable way
 
 References:
 1. https://www.idmod.org/docs/hiv/model-seir.html#seir-without-vital-dynamics.
 2. https://www.kaggle.com/super13579/covid-19-global-forecast-seir-visualize.
 3. https://www.medrxiv.org/content/10.1101/2020.03.26.20044289v1.full.pdf
+4. Epidemic analysis of COVID-19 in China by dynamical modeling: https://www.medrxiv.org/content/10.1101/2020.02.16.20023465v1
+5. https://www.who.int/bulletin/online_first/20-257907.pdf
 
 
 
